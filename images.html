@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="galleryelegant.css" />
+  </head>
+  <body>
+	  <div id="container">
+		  <div class="item">
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="latte.png" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="cappuchino.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+		  <div class="item">
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+			  <div class="subitem"><img src="coffee.jpg" /></div>
+		  </div>
+	  </div>
+	  <ul class="pagination">
+		  <li>1</li>
+		  <li>2</li>
+		  <li>3</li>
+		  <li>4</li>
+		  <li>5</li>
+		  <li>6</li>
+	  </ul>
+  <script>
+	(function($){
+		var windowWidth = $(window).width();
+		createPagination = function(){
+			switch(true){
+				case windowWidth<=767:
+					console.log("less than 767px, one column");
+				break;
+				case windowWidth>768 && windowWidth<979:
+					console.log("less than 979px and more than 768, two columns");
+					
+				break;
+				case windowWidth>980:
+					console.log("more than 800px, four columns");
+				break;
+			}
+		}
+
+		$(window).resize(function(){
+			windowWidth = $(window).width();
+			createPagination();
+		});
+	}(jQuery))
+  </script>
+  </body>
+</html>
